@@ -50,8 +50,7 @@ public class ActionEconomy extends ModActionTemplate{
             maxRank = ranking.size();
         }
             for(int i = 0; i < maxRank; i++){
-                //Utils.chatMessage((i+1)+": "+ranking.get(i).name+" | "+convertToReadable(ranking.get(i).money), performer);
-                Utils.chatMessage(String.format("%4d : %25s | %-50s", (i+1), ranking.get(i).name, convertToReadable(ranking.get(i).money)), performer);
+                Utils.chatMessage((i+1)+": "+ranking.get(i).name+" | "+convertToReadable(ranking.get(i).money), performer);
             }
 
 
@@ -67,8 +66,7 @@ public class ActionEconomy extends ModActionTemplate{
         int silver = Integer.valueOf(sum.substring(length-6, length-4));
         int gold   = (int) money/1000000;
 
-        //return gold+" Gold | "+silver+" Silver | "+copper+" Copper | "+iron+" Iron";
-        return String.format("%3d Gold | %3d Silver | %3d Copper | %3d Iron",gold, silver, copper, iron);
+        return gold+" Gold | "+silver+" Silver | "+copper+" Copper | "+iron+" Iron";
     }
 
     class Node{
